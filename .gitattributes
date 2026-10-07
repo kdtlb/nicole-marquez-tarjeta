@@ -1,0 +1,2 @@
+# La vCard exige saltos de linea CRLF: que git no los convierta a LF.
+*.vcf -text

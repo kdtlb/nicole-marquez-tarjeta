@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title data-i18n="tj_title">Nicole Márquez · Tarjeta de presentación</title>
+<meta name="description" data-i18n-content="tj_meta" content="Tarjeta de presentación digital de Nicole Márquez, organizadora de eventos en Tarija: teléfono, WhatsApp, correo, ubicación y redes sociales.">
+<link rel="canonical" href="https://kdtlb.github.io/nicole-marquez-tarjeta/">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Nicole Márquez · Organización de Eventos">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Nicole Márquez · Organizadora de Eventos">
+<meta property="og:description" content="Tarjeta de presentación digital: teléfono, WhatsApp, correo, ubicación y redes sociales.">
+<meta property="og:url" content="https://kdtlb.github.io/nicole-marquez-tarjeta/">
+<meta property="og:image" content="https://kdtlb.github.io/nicole-marquez-tarjeta/assets/nicole.jpg">
+<meta property="og:image:width" content="480">
+<meta property="og:image:height" content="480">
+<meta property="og:image:alt" content="Nicole Márquez, organizadora de eventos en Tarija">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#272b00">
+<link rel="preload" href="assets/fonts/cormorant-garamond-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/jost-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/marcellus-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* =========================================================
+   Nicole Márquez · Tarjeta de presentación digital
+   Pagina independiente del sitio: todo lo que necesita esta en
+   esta carpeta (estilos aqui mismo, fuentes y fotos en assets/),
+   asi se puede mover o publicar por separado sin romperse.
+   Misma linea visual que el sitio: verde oliva, dorado y marfil.
+   ========================================================= */
+
+/* Solo el subconjunto "latin": cubre los acentos del espanol,
+   frances y portugues (á, ñ, ç, ã...). El "latin-ext" del sitio
+   aqui no hace falta. */
+@font-face{
+  font-family:'Cormorant Garamond'; font-style:normal; font-weight:300 700; font-display:swap;
+  src:url(assets/fonts/cormorant-garamond-normal-latin.woff2) format('woff2');
+}
+@font-face{
+  font-family:'Cormorant Garamond'; font-style:italic; font-weight:300 700; font-display:swap;
+  src:url(assets/fonts/cormorant-garamond-italic-latin.woff2) format('woff2');
+}
+@font-face{
+  font-family:'Jost'; font-style:normal; font-weight:300 600; font-display:swap;
+  src:url(assets/fonts/jost-normal-latin.woff2) format('woff2');
+}
+@font-face{
+  font-family:'Marcellus'; font-style:normal; font-weight:400; font-display:swap;
+  src:url(assets/fonts/marcellus-400-normal-latin.woff2) format('woff2');
+}
+
+/* ---------- Variables (las mismas del sitio) ---------- */
+:root{
+  --wine:        #54582f;
+  --wine-deep:   #272b00;
+  --wine-soft:   #6d7040;
+  --gold:        #c9a24b;
+  --gold-light:  #e6cd8c;
+  --gold-deep:   #a6822e;
+  --gold-text:   #846825;   /* dorado para texto pequeno sobre claro (4.5:1) */
+  --cream:       #f6ecdc;
+  --ivory:       #fdf8ef;
+  --ink:         #2a1610;
+  --ink-soft:    #6a4f43;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-accent:  'Marcellus', serif;
+  --font-body:    'Jost', sans-serif;
+
+  --ease: cubic-bezier(.22,.61,.36,1);
+  --star: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath d='M40 6 L46 34 L74 40 L46 46 L40 74 L34 46 L6 40 L34 34 Z' fill='none' stroke='%23c9a24b' stroke-width='.4' opacity='.16'/%3E%3C/svg%3E");
+}
+
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+html{ -webkit-text-size-adjust:100%; }
+body{
+  font-family:var(--font-body); font-weight:300; line-height:1.6; color:var(--ink);
+  min-height:100vh; min-height:100dvh;
+  display:flex; justify-content:center; align-items:flex-start;
+  padding:clamp(1.2rem,5vw,3.5rem) 1rem;
+  background:
+    radial-gradient(120% 80% at 80% 0%, rgba(201,162,75,.22), transparent 55%),
+    var(--star) 0 0/90px 90px,
+    linear-gradient(160deg,var(--wine),var(--wine-deep) 70%);
+  background-color:var(--wine-deep);
+}
+/* Grano sutil, igual que en el sitio */
+body::after{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:50; opacity:.04;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+img,svg{ display:block; max-width:100%; }
+a{ color:inherit; text-decoration:none; }
+ul{ list-style:none; }
+h1,h2{ font-family:var(--font-display); font-weight:600; line-height:1.08; }
+
+:focus-visible{ outline:3px solid var(--gold); outline-offset:3px; }
+.cover :focus-visible,.svc-band :focus-visible{ outline-color:var(--gold-light); }
+
+.kicker{
+  font-family:var(--font-accent); text-transform:uppercase;
+  letter-spacing:.34em; font-size:.68rem; color:var(--gold-text); display:inline-block;
+}
+
+/* ---------- Tarjeta ---------- */
+.card{
+  width:100%; max-width:430px; position:relative;
+  background:var(--ivory); overflow:hidden;
+  box-shadow:0 40px 90px -30px rgba(0,0,0,.75);
+}
+/* Filete dorado alrededor, como el marco de los retratos del sitio */
+.frame{ position:relative; width:100%; max-width:430px; }
+.frame::before{
+  content:""; position:absolute; inset:-10px; pointer-events:none;
+  border:1px solid rgba(201,162,75,.35);
+}
+
+/* Portada: la foto del hero del sitio bajo el mismo degradado oscuro */
+.cover{
+  position:relative; height:240px; padding:1rem 1.1rem 0;
+  display:flex; flex-direction:column; align-items:center;
+  color:var(--ivory);
+  background:
+    radial-gradient(120% 120% at 80% 0%, rgba(201,162,75,.35), transparent 55%),
+    linear-gradient(155deg, rgba(0,0,0,.78) 0%, rgba(0,0,0,.62) 55%, rgba(0,0,0,.88) 100%),
+    url("assets/portada.jpg") center/cover;
+  background-color:var(--wine-deep);
+}
+.cover::before{ content:""; position:absolute; inset:0; background:var(--star) 0 0/90px 90px; opacity:.6; pointer-events:none; }
+.cover > *{ position:relative; z-index:2; }
+.cover .logo{ width:min(230px,64%); height:auto; margin-top:1.5rem; animation:fadeUp 1s var(--ease) both; }
+
+/* Selector de idioma */
+.lang-switch{ align-self:flex-end; display:flex; font-family:var(--font-accent); }
+.lang-switch button{
+  background:none; border:0; cursor:pointer; padding:.28rem .42rem;
+  color:var(--ivory); opacity:.62; font-family:inherit;
+  font-size:.66rem; letter-spacing:.14em; line-height:1; transition:.25s var(--ease);
+}
+.lang-switch button + button{ border-left:1px solid rgba(230,205,140,.32); }
+.lang-switch button:hover{ opacity:1; color:var(--gold-light); }
+.lang-switch button.active{ opacity:1; color:var(--gold-light); font-weight:600; }
+
+/* Retrato circular montado sobre la portada */
+.portrait{
+  position:relative; z-index:3; width:150px; height:150px; margin:-75px auto 0;
+  border-radius:50%; padding:5px; background:var(--ivory);
+  box-shadow:0 0 0 1px var(--gold), 0 18px 40px -16px rgba(15,42,30,.65);
+  animation:fadeUp 1s .12s var(--ease) both;
+}
+.portrait img{ width:100%; height:100%; border-radius:50%; object-fit:cover; }
+
+/* Identidad */
+.ident{ text-align:center; padding:1.3rem 1.6rem 0; animation:fadeUp 1s .24s var(--ease) both; }
+.ident h1{ font-size:2.7rem; color:var(--wine); margin-top:.35rem; }
+.ident .role{
+  font-family:var(--font-accent); text-transform:uppercase; letter-spacing:.18em;
+  font-size:.74rem; color:var(--ink-soft); margin-top:.55rem;
+}
+.ornament{ display:flex; align-items:center; justify-content:center; gap:1rem; margin:1.3rem 0 1.1rem; }
+.ornament span{ height:1px; width:70px; background:linear-gradient(90deg,transparent,var(--gold)); }
+.ornament span:last-child{ background:linear-gradient(90deg,var(--gold),transparent); }
+.ornament i{ width:9px; height:9px; transform:rotate(45deg); border:1px solid var(--gold); }
+.motto{
+  font-family:var(--font-display); font-style:italic; font-weight:500;
+  font-size:1.32rem; line-height:1.35; color:var(--wine-soft); max-width:320px; margin:0 auto;
+  text-wrap:balance;   /* evita que "sienten" quede sola en la ultima linea */
+}
+.motto em{ color:var(--gold-deep); }
+
+/* Accesos rapidos: rombos dorados como los iconos de Contacto */
+.quick{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:.4rem;
+  padding:2.2rem 1rem .2rem; animation:fadeUp 1s .36s var(--ease) both;
+}
+.quick a{
+  display:flex; flex-direction:column; align-items:center; gap:1.1rem;
+  font-family:var(--font-accent); text-transform:uppercase; letter-spacing:.12em;
+  font-size:.64rem; color:var(--wine); padding-top:8px;
+}
+.ci{
+  width:46px; height:46px; flex-shrink:0; border:1px solid var(--gold);
+  display:flex; align-items:center; justify-content:center; color:var(--gold-deep);
+  transform:rotate(45deg); transition:.4s var(--ease);
+}
+.ci svg{ width:21px; height:21px; transform:rotate(-45deg); }
+.quick a:hover .ci,.quick a:focus-visible .ci{ background:var(--gold); color:var(--wine-deep); }
+.quick a:focus-visible{ outline-offset:6px; }
+
+/* Botones (mismo dibujo que .btn del sitio) */
+.actions{ display:grid; gap:.8rem; padding:2rem 1.6rem 0; }
+.btn{
+  display:flex; align-items:center; justify-content:center; gap:.7rem; width:100%;
+  font-family:var(--font-accent); text-transform:uppercase; letter-spacing:.2em; font-size:.76rem;
+  padding:1rem 1.4rem; cursor:pointer; transition:.45s var(--ease);
+  border:1px solid var(--gold); background:none;
+}
+.btn svg{ width:18px; height:18px; flex-shrink:0; }
+.btn-gold{ background:var(--gold); color:var(--wine-deep); }
+.btn-gold:hover{ background:var(--wine-deep); border-color:var(--wine-deep); color:var(--gold-light); }
+.btn-dark{ border-color:var(--wine); color:var(--wine); }
+.btn-dark:hover{ background:var(--wine); color:var(--ivory); }
+
+/* Bloques de informacion */
+.block{ padding:2.4rem 1.6rem 0; }
+.block-title{
+  display:flex; align-items:center; gap:1rem; margin-bottom:1.3rem;
+  font-family:var(--font-accent); font-weight:400; font-size:.68rem; line-height:1.4;
+  text-transform:uppercase; letter-spacing:.34em; color:var(--gold-text);
+}
+.block-title::after{ content:""; flex:1; height:1px; background:linear-gradient(90deg,var(--gold),transparent); }
+
+.contact-list{ display:flex; flex-direction:column; gap:1.25rem; }
+.contact-list li{ display:flex; gap:1.15rem; align-items:center; }
+.contact-list .ci{ width:38px; height:38px; margin:0 4px; }
+.contact-list .ci svg{ width:17px; height:17px; }
+.contact-list li:hover .ci{ background:var(--gold); color:var(--wine-deep); }
+.cd{ min-width:0; }
+.cd span{
+  display:block; font-family:var(--font-accent); text-transform:uppercase;
+  letter-spacing:.16em; font-size:.64rem; color:var(--gold-text);
+}
+.cd a,.cd p{ font-family:var(--font-display); font-size:1.28rem; line-height:1.3; color:var(--wine); overflow-wrap:anywhere; }
+.cd a:hover{ color:var(--gold-deep); }
+
+.hours{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:.6rem; margin-top:1.8rem;
+  padding:1.1rem 0; text-align:center;
+  border-top:1px solid rgba(30,77,57,.15); border-bottom:1px solid rgba(30,77,57,.15);
+}
+.hours span{
+  display:block; font-family:var(--font-accent); text-transform:uppercase;
+  letter-spacing:.12em; font-size:.6rem; line-height:1.4; color:var(--gold-text);
+}
+.hours b{ font-family:var(--font-display); font-weight:600; font-size:1.08rem; color:var(--wine); }
+
+/* Franja de servicios en verde, como la cita destacada del sitio */
+.svc-band{
+  position:relative; margin-top:2.6rem; padding:2.4rem 1.6rem 2.5rem;
+  background:linear-gradient(160deg,var(--wine),var(--wine-deep)); color:var(--ivory);
+}
+.svc-band::before{ content:""; position:absolute; inset:0; background:var(--star) 0 0/80px 80px; pointer-events:none; }
+.svc-band > *{ position:relative; }
+.svc-band .block-title{ color:var(--gold-light); }
+.svc-band .block-title::after{ background:linear-gradient(90deg,var(--gold-light),transparent); }
+.svc-list{ display:grid; grid-template-columns:1fr 1fr; gap:.9rem 1.2rem; }
+.svc-list li{
+  display:flex; gap:.6rem; align-items:baseline;
+  font-family:var(--font-display); font-size:1.24rem; line-height:1.25;
+}
+.svc-list li::before{ content:"◆"; color:var(--gold); font-size:.62rem; transform:translateY(-.15em); }
+
+/* Redes */
+.socials{ display:flex; gap:.8rem; flex-wrap:wrap; }
+.socials a{
+  width:48px; height:48px; border:1px solid rgba(30,77,57,.25);
+  display:flex; align-items:center; justify-content:center; color:var(--wine);
+  transition:.4s var(--ease);
+}
+.socials a svg{ width:20px; height:20px; }
+.socials a:hover{ background:var(--wine); color:var(--gold-light); border-color:var(--wine); transform:translateY(-4px); }
+.web-link{
+  display:inline-flex; align-items:center; gap:.5rem; margin-top:1.3rem;
+  font-family:var(--font-accent); text-transform:uppercase; letter-spacing:.2em;
+  font-size:.7rem; color:var(--gold-text); transition:gap .3s;
+}
+.web-link:hover{ gap:.9rem; }
+
+/* Codigo QR: lo genera el script con la direccion real de la tarjeta */
+.qr-block{ padding:2.6rem 1.6rem 2.6rem; text-align:center; }
+.qr-frame{
+  position:relative; width:196px; margin:0 auto; padding:16px;
+  background:#fff; border:1px solid var(--gold);
+}
+.qr-frame::before{ content:""; position:absolute; inset:5px; border:1px solid rgba(201,162,75,.4); pointer-events:none; }
+.qr-frame svg{ width:100%; height:auto; }
+.qr-block p{
+  font-family:var(--font-display); font-style:italic; font-size:1.1rem; line-height:1.4;
+  color:var(--ink-soft); max-width:280px; margin:1.2rem auto 0; text-wrap:balance;
+}
+
+.card-foot{
+  background:var(--wine-deep); color:rgba(246,236,220,.62);
+  text-align:center; padding:1.3rem 1.2rem; font-size:.74rem; letter-spacing:.06em;
+  border-top:1px solid rgba(201,162,75,.25);
+}
+.card-foot small{
+  display:block; margin-top:.25rem; font-family:var(--font-accent); text-transform:uppercase;
+  letter-spacing:.4em; font-size:.58rem; color:var(--gold-light);
+}
+
+/* Aviso breve (enlace copiado) */
+.toast{
+  position:fixed; left:50%; bottom:calc(1.4rem + env(safe-area-inset-bottom)); z-index:60;
+  transform:translate(-50%,20px); opacity:0; pointer-events:none;
+  background:var(--wine-deep); color:var(--gold-light); border:1px solid rgba(201,162,75,.5);
+  padding:.8rem 1.4rem; font-family:var(--font-accent); text-transform:uppercase;
+  letter-spacing:.16em; font-size:.7rem; box-shadow:0 12px 30px -10px rgba(0,0,0,.55);
+  transition:.4s var(--ease);
+}
+.toast.show{ opacity:1; transform:translate(-50%,0); }
+
+@keyframes fadeUp{ from{ opacity:0; transform:translateY(24px); } to{ opacity:1; transform:none; } }
+
+/* En el telefono la tarjeta ocupa toda la pantalla, sin marco */
+@media(max-width:479px){
+  body{ padding:0; background:var(--ivory); }
+  .frame,.card{ max-width:none; }
+  .frame::before{ display:none; }
+  .card{ box-shadow:none; }
+}
+@media(max-width:359px){
+  .ident h1{ font-size:2.3rem; }
+  .quick a{ font-size:.58rem; letter-spacing:.08em; }
+  .svc-list{ grid-template-columns:1fr; }
+}
+/* Quien pide menos movimiento recibe la tarjeta sin animaciones */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{ animation-duration:.01ms !important; transition-duration:.01ms !important; }
+}
+@media print{
+  body{ background:none; padding:0; }
+  body::after,.lang-switch,.actions,.toast{ display:none; }
+  .card{ box-shadow:none; }
+  .frame::before{ display:none; }
+}
+</style>
+</head>
+<body>
+
+<main class="frame">
+<article class="card">
+
+  <!-- PORTADA -->
+  <header class="cover">
+    <div class="lang-switch" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="es" lang="es">ES</button>
+      <button type="button" data-lang="en" lang="en">EN</button>
+      <button type="button" data-lang="fr" lang="fr">FR</button>
+      <button type="button" data-lang="pt" lang="pt">PT</button>
+    </div>
+    <img class="logo" src="assets/logo.png" alt="Nicole Márquez - Organizadora de Eventos" width="800" height="216">
+  </header>
+
+  <div class="portrait">
+    <img src="assets/nicole.jpg" alt="Nicole Márquez" width="480" height="480">
+  </div>
+
+  <!-- IDENTIDAD -->
+  <div class="ident">
+    <span class="kicker" data-i18n="tj_kicker">Fundadora &amp; Directora</span>
+    <h1>Nicole Márquez</h1>
+    <p class="role" data-i18n="tj_role">Organización de Eventos · Tarija</p>
+    <div class="ornament" aria-hidden="true"><span></span><i></i><span></span></div>
+    <p class="motto" data-i18n="tj_motto">Creamos eventos que se sueñan, se viven y se <em>sienten</em></p>
+  </div>
+
+  <!-- ACCESOS RÁPIDOS -->
+  <nav class="quick" aria-label="Acciones rápidas" data-i18n-aria="tj_quick_aria">
+    <a href="tel:+59167393012">
+      <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
+      <span data-i18n="tj_call">Llamar</span>
+    </a>
+    <a href="https://wa.me/59167393012" target="_blank" rel="noopener" class="js-wa">
+      <span class="ci"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.4 2.6 1.6.3.1.5.1.6-.1l.7-.9c.2-.3.4-.2.6-.1l1.8.9c.3.1.5.2.5.4.1.1.1.6-.2 1.3z"/></svg></span>
+      <span>WhatsApp</span>
+    </a>
+    <a href="mailto:ndmarquezm@gmail.com">
+      <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+      <span data-i18n="tj_mail">Correo</span>
+    </a>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20La%20Paz%2C%20Zona%20Salamanca%2C%20Tarija%2C%20Bolivia" target="_blank" rel="noopener">
+      <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+      <span data-i18n="tj_map">Mapa</span>
+    </a>
+  </nav>
+
+  <!-- BOTONES -->
+  <div class="actions">
+    <a class="btn btn-gold" href="nicole-marquez.vcf" id="guardar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10" cy="8" r="4"/><path d="M3 20a7 7 0 0 1 14 0M19 8v6M16 11h6"/></svg>
+      <span data-i18n="tj_save">Guardar contacto</span>
+    </a>
+    <button class="btn btn-dark" type="button" id="compartir" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
+      <span data-i18n="tj_share">Compartir tarjeta</span>
+    </button>
+  </div>
+
+  <!-- CONTACTO -->
+  <section class="block">
+    <h2 class="block-title" data-i18n="tj_contact_title">Contacto directo</h2>
+    <ul class="contact-list">
+      <li>
+        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
+        <div class="cd"><span data-i18n="tj_phone_label">Teléfono / WhatsApp</span><a href="tel:+59167393012">+591 673 93 012</a></div>
+      </li>
+      <li>
+        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+        <div class="cd"><span data-i18n="tj_email_label">Correo electrónico</span><a href="mailto:ndmarquezm@gmail.com">ndmarquezm@gmail.com</a></div>
+      </li>
+      <li>
+        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+        <div class="cd"><span data-i18n="tj_loc_label">Ubicación</span><p data-i18n="tj_address">Av. La Paz – Zona Salamanca · Tarija, Bolivia</p></div>
+      </li>
+    </ul>
+
+    <div class="hours">
+      <div><span data-i18n="tj_hours1">Lunes a Viernes</span><b>09:00 — 12:30</b></div>
+      <div><span data-i18n="tj_hours2">Sábados</span><b>09:00 — 12:30</b></div>
+      <div><span data-i18n="tj_hours3">Reuniones</span><b data-i18n="tj_hours3_val">Previa cita</b></div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="svc-band">
+    <h2 class="block-title" data-i18n="tj_svc_title">Nuestros servicios</h2>
+    <ul class="svc-list">
+      <li data-i18n="tj_svc1">Bodas</li>
+      <li data-i18n="tj_svc2">Eventos sociales</li>
+      <li data-i18n="tj_svc3">Eventos corporativos</li>
+      <li data-i18n="tj_svc4">Eventos destino</li>
+    </ul>
+  </section>
+
+  <!-- REDES -->
+  <section class="block">
+    <h2 class="block-title" data-i18n="tj_follow">Síguenos</h2>
+    <div class="socials">
+      <a href="https://www.instagram.com/nicolem.wp/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://www.facebook.com/profile.php?id=100064047130136" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9h3V6h-3c-2 0-3.5 1.5-3.5 3.5V12H8v3h2.5v6h3v-6H16l.5-3h-3v-2.2c0-.5.4-.8.9-.8z"/></svg></a>
+      <a href="https://www.tiktok.com/@nicoledayanamarquezmend0" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 3c.3 2 1.7 3.5 3.7 3.8V9.5c-1.4 0-2.7-.4-3.7-1.1v6.1c0 3-2.4 5.5-5.4 5.5S5.2 17.5 5.2 14.5 7.6 9 10.6 9c.3 0 .6 0 .9.1v2.7c-.3-.1-.6-.2-.9-.2-1.4 0-2.6 1.2-2.6 2.6s1.2 2.6 2.6 2.6 2.6-1.1 2.6-2.6V3H16z"/></svg></a>
+      <a href="https://nicolemarquez.com/" target="_blank" rel="noopener" aria-label="Sitio web" data-i18n-aria="tj_web_aria"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></a>
+    </div>
+    <a class="web-link" href="https://nicolemarquez.com/" target="_blank" rel="noopener" data-i18n="tj_web">Visitar el sitio web →</a>
+  </section>
+
+  <!-- QR (se muestra solo cuando el script lo dibuja) -->
+  <section class="qr-block" id="qr-block" hidden>
+    <div class="qr-frame" id="qr" role="img" aria-label="Código QR que abre esta tarjeta" data-i18n-aria="tj_qr_aria"></div>
+    <p data-i18n="tj_qr_text">Escanea el código para llevarte esta tarjeta en tu teléfono</p>
+  </section>
+
+  <footer class="card-foot">
+    <span data-i18n="tj_foot">© 2026 Nicole Márquez · Organización de Eventos</span>
+    <small>Tarija · Bolivia</small>
+  </footer>
+
+</article>
+</main>
+
+<div class="toast" id="aviso" role="status" aria-live="polite"></div>
+
+<script src="assets/qrcode.min.js"></script>
+<script>
+(function () {
+  /* Direccion publica de la tarjeta. Se usa en el QR y al compartir solo
+     cuando se abre en local (archivo o localhost); publicada, la tarjeta
+     usa su propia direccion, asi el QR sigue siendo correcto aunque
+     cambie el dominio. */
+  const CANONICA = 'https://kdtlb.github.io/nicole-marquez-tarjeta/';
+  const WA_NUMERO = '59167393012';
+  const LANGS = ['es', 'en', 'fr', 'pt'];
+
+  const T = {
+    tj_title:   { es: 'Nicole Márquez · Tarjeta de presentación', en: 'Nicole Márquez · Business card', fr: 'Nicole Márquez · Carte de visite', pt: 'Nicole Márquez · Cartão de visita' },
+    tj_meta: {
+      es: 'Tarjeta de presentación digital de Nicole Márquez, organizadora de eventos en Tarija: teléfono, WhatsApp, correo, ubicación y redes sociales.',
+      en: 'Digital business card of Nicole Márquez, event planner in Tarija: phone, WhatsApp, email, location and social media.',
+      fr: 'Carte de visite numérique de Nicole Márquez, organisatrice d’événements à Tarija : téléphone, WhatsApp, e-mail, adresse et réseaux sociaux.',
+      pt: 'Cartão de visita digital de Nicole Márquez, organizadora de eventos em Tarija: telefone, WhatsApp, e-mail, localização e redes sociais.'
+    },
+    tj_kicker:  { es: 'Fundadora &amp; Directora', en: 'Founder &amp; Director', fr: 'Fondatrice &amp; Directrice', pt: 'Fundadora &amp; Diretora' },
+    tj_role:    { es: 'Organización de Eventos · Tarija', en: 'Event Planning · Tarija', fr: 'Organisation d’Événements · Tarija', pt: 'Organização de Eventos · Tarija' },
+    tj_motto: {
+      es: 'Creamos eventos que se sueñan, se viven y se <em>sienten</em>',
+      en: 'We create events that are dreamed, lived and truly <em>felt</em>',
+      fr: 'Nous créons des événements que l’on rêve, que l’on vit et que l’on <em>ressent</em>',
+      pt: 'Criamos eventos que se sonham, se vivem e se <em>sentem</em>'
+    },
+    tj_quick_aria: { es: 'Acciones rápidas', en: 'Quick actions', fr: 'Actions rapides', pt: 'Ações rápidas' },
+    tj_call:    { es: 'Llamar', en: 'Call', fr: 'Appeler', pt: 'Ligar' },
+    tj_mail:    { es: 'Correo', en: 'Email', fr: 'E-mail', pt: 'E-mail' },
+    tj_map:     { es: 'Mapa', en: 'Map', fr: 'Plan', pt: 'Mapa' },
+    tj_save:    { es: 'Guardar contacto', en: 'Save contact', fr: 'Enregistrer le contact', pt: 'Salvar contato' },
+    tj_share:   { es: 'Compartir tarjeta', en: 'Share card', fr: 'Partager la carte', pt: 'Compartilhar cartão' },
+    tj_contact_title: { es: 'Contacto directo', en: 'Direct contact', fr: 'Contact direct', pt: 'Contato direto' },
+    tj_phone_label:   { es: 'Teléfono / WhatsApp', en: 'Phone / WhatsApp', fr: 'Téléphone / WhatsApp', pt: 'Telefone / WhatsApp' },
+    tj_email_label:   { es: 'Correo electrónico', en: 'Email', fr: 'E-mail', pt: 'E-mail' },
+    tj_loc_label:     { es: 'Ubicación', en: 'Location', fr: 'Adresse', pt: 'Localização' },
+    tj_address: {
+      es: 'Av. La Paz – Zona Salamanca · Tarija, Bolivia',
+      en: 'Av. La Paz – Zona Salamanca · Tarija, Bolivia',
+      fr: 'Av. La Paz – Zona Salamanca · Tarija, Bolivie',
+      pt: 'Av. La Paz – Zona Salamanca · Tarija, Bolívia'
+    },
+    tj_hours1:     { es: 'Lunes a Viernes', en: 'Monday to Friday', fr: 'Lundi au vendredi', pt: 'Segunda a sexta' },
+    tj_hours2:     { es: 'Sábados', en: 'Saturdays', fr: 'Samedis', pt: 'Sábados' },
+    tj_hours3:     { es: 'Reuniones', en: 'Meetings', fr: 'Rendez-vous', pt: 'Reuniões' },
+    tj_hours3_val: { es: 'Previa cita', en: 'By appointment', fr: 'Sur rendez-vous', pt: 'Com hora marcada' },
+    tj_svc_title:  { es: 'Nuestros servicios', en: 'Our services', fr: 'Nos services', pt: 'Nossos serviços' },
+    tj_svc1: { es: 'Bodas', en: 'Weddings', fr: 'Mariages', pt: 'Casamentos' },
+    tj_svc2: { es: 'Eventos sociales', en: 'Social events', fr: 'Événements sociaux', pt: 'Eventos sociais' },
+    tj_svc3: { es: 'Eventos corporativos', en: 'Corporate events', fr: 'Événements corporatifs', pt: 'Eventos corporativos' },
+    tj_svc4: { es: 'Eventos destino', en: 'Destination events', fr: 'Événements sur destination', pt: 'Eventos destino' },
+    tj_follow:   { es: 'Síguenos', en: 'Follow us', fr: 'Suivez-nous', pt: 'Siga-nos' },
+    tj_web:      { es: 'Visitar el sitio web →', en: 'Visit the website →', fr: 'Visiter le site web →', pt: 'Visitar o site →' },
+    tj_web_aria: { es: 'Sitio web', en: 'Website', fr: 'Site web', pt: 'Site' },
+    tj_qr_aria:  { es: 'Código QR que abre esta tarjeta', en: 'QR code that opens this card', fr: 'Code QR qui ouvre cette carte', pt: 'Código QR que abre este cartão' },
+    tj_qr_text: {
+      es: 'Escanea el código para llevarte esta tarjeta en tu teléfono',
+      en: 'Scan the code to keep this card on your phone',
+      fr: 'Scannez le code pour garder cette carte sur votre téléphone',
+      pt: 'Escaneie o código para levar este cartão no seu celular'
+    },
+    tj_foot: {
+      es: '© 2026 Nicole Márquez · Organización de Eventos',
+      en: '© 2026 Nicole Márquez · Event Planning',
+      fr: '© 2026 Nicole Márquez · Organisation d’Événements',
+      pt: '© 2026 Nicole Márquez · Organização de Eventos'
+    },
+    tj_copied: { es: 'Enlace copiado', en: 'Link copied', fr: 'Lien copié', pt: 'Link copiado' },
+    tj_share_text: {
+      es: 'Tarjeta de presentación de Nicole Márquez · Organización de Eventos',
+      en: 'Business card of Nicole Márquez · Event Planning',
+      fr: 'Carte de visite de Nicole Márquez · Organisation d’Événements',
+      pt: 'Cartão de visita de Nicole Márquez · Organização de Eventos'
+    },
+    tj_wa_text: {
+      es: 'Hola, me gustaría más información sobre sus servicios de organización de eventos.',
+      en: 'Hello, I would like more information about your event planning services.',
+      fr: 'Bonjour, je souhaiterais plus d’informations sur vos services d’organisation d’événements.',
+      pt: 'Olá, gostaria de mais informações sobre os seus serviços de organização de eventos.'
+    }
+  };
+
+  /* localStorage puede fallar (navegacion privada, datos bloqueados):
+     en ese caso la tarjeta simplemente abre en espanol. Usa la misma
+     clave que el sitio, asi quien ya eligio idioma alli lo conserva. */
+  const leerIdioma = () => {
+    try { const l = localStorage.getItem('nm-lang'); return LANGS.indexOf(l) !== -1 ? l : 'es'; }
+    catch (e) { return 'es'; }
+  };
+  const guardarIdioma = (l) => { try { localStorage.setItem('nm-lang', l); } catch (e) {} };
+
+  let idioma = leerIdioma();
+  const t = (k) => (T[k] && (T[k][idioma] != null ? T[k][idioma] : T[k].es)) || '';
+
+  const aplicar = (l) => {
+    idioma = l;
+    document.documentElement.lang = l;
+    document.querySelectorAll('[data-i18n]').forEach((el) => {
+      const v = t(el.getAttribute('data-i18n'));
+      if (v) el.innerHTML = v;
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach((el) => {
+      const v = t(el.getAttribute('data-i18n-aria'));
+      if (v) el.setAttribute('aria-label', v);
+    });
+    document.querySelectorAll('[data-i18n-content]').forEach((el) => {
+      const v = t(el.getAttribute('data-i18n-content'));
+      if (v) el.setAttribute('content', v);
+    });
+    document.querySelectorAll('.lang-switch [data-lang]').forEach((b) => {
+      const activo = b.getAttribute('data-lang') === l;
+      b.classList.toggle('active', activo);
+      b.setAttribute('aria-pressed', activo ? 'true' : 'false');
+    });
+    // El mensaje de WhatsApp llega ya escrito en el idioma elegido
+    document.querySelectorAll('.js-wa').forEach((a) => {
+      a.href = 'https://wa.me/' + WA_NUMERO + '?text=' + encodeURIComponent(t('tj_wa_text'));
+    });
+  };
+
+  document.querySelectorAll('.lang-switch [data-lang]').forEach((b) =>
+    b.addEventListener('click', () => {
+      const l = b.getAttribute('data-lang');
+      guardarIdioma(l);
+      aplicar(l);
+    })
+  );
+  aplicar(idioma);
+
+  /* --- Direccion de la tarjeta --- */
+  const enLocal = location.protocol === 'file:' ||
+    /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+  const URL_TARJETA = enLocal ? CANONICA
+    : location.origin + location.pathname.replace(/index\.html$/, '');
+
+  /* --- Guardar contacto ---
+     En iPhone el .vcf se abre directo en la ficha de "Nuevo contacto" solo si
+     el enlace NO lleva "download"; con el atributo, Safari lo manda a
+     Descargas y hay que buscarlo. En el resto de equipos el atributo evita
+     que el navegador lo muestre como texto. */
+  const esIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  if (!esIOS) document.getElementById('guardar').setAttribute('download', 'Nicole-Marquez.vcf');
+
+  /* --- Compartir: menu nativo del telefono o, si no hay, copiar enlace --- */
+  const aviso = document.getElementById('aviso');
+  let reloj = null;
+  const avisar = (txt) => {
+    aviso.textContent = txt;
+    aviso.classList.add('show');
+    clearTimeout(reloj);
+    reloj = setTimeout(() => aviso.classList.remove('show'), 2400);
+  };
+  const compartir = document.getElementById('compartir');
+  if (navigator.share || (navigator.clipboard && window.isSecureContext)) {
+    compartir.hidden = false;
+    compartir.addEventListener('click', async () => {
+      if (navigator.share) {
+        try { await navigator.share({ title: 'Nicole Márquez', text: t('tj_share_text'), url: URL_TARJETA }); }
+        catch (e) { /* la persona cerro el menu: no hace falta avisar */ }
+        return;
+      }
+      try { await navigator.clipboard.writeText(URL_TARJETA); avisar(t('tj_copied')); }
+      catch (e) {}
+    });
+  }
+
+  /* --- Codigo QR ---
+     Nivel de correccion H (30 %): permite tapar el centro con el rombo
+     dorado de la marca sin que el codigo deje de leerse. */
+  if (typeof qrcode === 'function') {
+    const qr = qrcode(0, 'H');
+    qr.addData(URL_TARJETA);
+    qr.make();
+    const n = qr.getModuleCount();
+    // Hueco central: cuadrado impar de modulos, ~22 % del lado
+    let k = Math.round(n * 0.22); if (k % 2 === 0) k++;
+    const a = (n - k) / 2, b = a + k;
+    let d = '';
+    for (let r = 0; r < n; r++) {
+      for (let c = 0; c < n; c++) {
+        if (r >= a && r < b && c >= a && c < b) continue;
+        if (qr.isDark(r, c)) d += 'M' + c + ' ' + r + 'h1v1h-1z';
+      }
+    }
+    const s = k / 90;   // el rombo del favicon esta dibujado en una caja de 90
+    document.getElementById('qr').innerHTML =
+      '<svg viewBox="0 0 ' + n + ' ' + n + '" shape-rendering="crispEdges" aria-hidden="true">' +
+      '<path fill="#272b00" d="' + d + '"/>' +
+      '<g transform="translate(' + a + ' ' + a + ') scale(' + s + ')" shape-rendering="geometricPrecision">' +
+      '<rect x="8" y="8" width="74" height="74" fill="#272b00"/>' +
+      '<path fill="#c9a24b" d="M45 14 L51 39 L76 45 L51 51 L45 76 L39 51 L14 45 L39 39 Z"/></g>' +
+      '</svg>';
+    document.getElementById('qr-block').hidden = false;
+  }
+})();
+</script>
+</body>
+</html>
